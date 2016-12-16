@@ -95,11 +95,11 @@ body {
     list-style: none; }
   .headerin__nav--pc a {
     color: #524c3e;
-    font-size: medium;
     text-decoration: none;
     font-weight: bold;
+    letter-spacing: 0.02em;
     float: left;
-    padding-right: 25px; }
+    padding-right: 18px; }
   .headerin__nav--pc a:hover {
     color: #b9ab8d; }
 
