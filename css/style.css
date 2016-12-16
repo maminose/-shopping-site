@@ -66,7 +66,8 @@ body {
     z-index: 2;
     width: 100%; }
     .headerin__nav--sp li {
-      padding: 15px 0;
+      font-size: 0.9em;
+      padding: 10px 0;
       list-style: none;
       border-bottom: solid 2px #f9f8f6;
       background-color: #ffffff;
@@ -238,7 +239,7 @@ footer img {
     @media only screen and (max-width: 959px) {
       .sidemenu__sp .sidemenu__serch {
         width: 100%;
-        padding: 0 0 10px 0;
+        padding: 10px 0 10px 0;
         min-height: 40px;
         margin: 0; } }
   .sidemenu__sp .sidemenu__title {
