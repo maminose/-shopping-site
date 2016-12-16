@@ -94,11 +94,11 @@ body {
     list-style: none; }
   .headerin__nav--pc a {
     color: #524c3e;
-    font-size: large;
+    font-size: medium;
     text-decoration: none;
     font-weight: bold;
     float: left;
-    padding-right: 15px; }
+    padding-right: 25px; }
   .headerin__nav--pc a:hover {
     color: #b9ab8d; }
 
@@ -135,14 +135,14 @@ footer img {
     color: #b8b4ac; }
 
 .sidemenu {
-  width: 100%; }
+  width: 100%;
+  font-size: 0.9em; }
   @media only screen and (max-width: 959px) {
     .sidemenu__pc {
       display: none; } }
   .sidemenu__title {
-    width: 95%;
+    width: 90%;
     padding: 5%;
-    font-size: 1em;
     background-color: #887f69;
     color: #ffffff;
     border-bottom: 1px solid #f9f8f6; }
@@ -153,13 +153,16 @@ footer img {
         display: none; } }
   .sidemenu ul {
     background-color: #ffffff;
-    width: 95%;
-    padding: 5%; }
+    width: 98%;
+    padding: 1%; }
   .sidemenu li {
+    position: relative;
     list-style: none;
     display: block;
     border-bottom: 1px solid #f9f8f6;
     padding: 10px; }
+    .sidemenu li i {
+      color: #b9ab8d; }
   .sidemenu li a:hover {
     color: #b9ab8d; }
   .sidemenu li a {
@@ -167,7 +170,7 @@ footer img {
     text-decoration: none;
     display: block; }
   .sidemenu__serch {
-    width: 95%;
+    width: 90%;
     padding: 5%;
     color: #887f69;
     font-weight: bold;
@@ -176,11 +179,10 @@ footer img {
     margin-bottom: 10px; }
     @media only screen and (max-width: 959px) {
       .sidemenu__serch {
-        height: 35px;
-        padding: 15px;
-        margin-bottom: 0; } }
+        height: auto; } }
   .sidemenu i {
-    margin-left: 60px;
+    position: absolute;
+    right: 2%;
     font-size: 1.6em; }
   .sidemenu form, .sidemenu input {
     margin: 0;
@@ -194,18 +196,19 @@ footer img {
     border: 0;
     height: 30px;
     /* 高さ40px */
-    width: 175px;
     padding: 0 10px;
     position: absolute;
     /* 絶対配置 */
     left: 0;
     top: 0;
     font-size: small;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    width: 98%; }
     @media only screen and (max-width: 959px) {
       .sidemenu input[type="search"] {
         /*スマホ時は大きく*/
-        width: 100%;
+        width: 98%;
+        margin: 1%;
         height: 35px; } }
   .sidemenu input[type="image"] {
     border: 0;
@@ -214,7 +217,7 @@ footer img {
     height: 17px;
     position: absolute;
     /* 絶対配置 */
-    left: 145px;
+    right: 4%;
     top: 7px; }
     @media only screen and (max-width: 959px) {
       .sidemenu input[type="image"] {
@@ -222,7 +225,7 @@ footer img {
         position: absolute;
         /* 絶対配置 */
         left: 90%;
-        top: 10px; } }
+        top: 16px; } }
   @media only screen and (max-width: 959px) {
     .sidemenu__sp {
       width: 100%; } }
@@ -234,26 +237,30 @@ footer img {
     height: 30px; }
     @media only screen and (max-width: 959px) {
       .sidemenu__sp .sidemenu__serch {
-        width: 95%; } }
+        width: 100%;
+        padding: 0 0 10px 0;
+        min-height: 40px;
+        margin: 0; } }
   .sidemenu__sp .sidemenu__title {
-    width: 95%;
-    padding: 15px 5%; }
-  .sidemenu__sp .sidemenu__box {
-    width: 105%;
-    height: 240px; }
-    .sidemenu__sp .sidemenu__box img {
-      float: left;
-      clear: both;
-      padding: 15px; }
-    .sidemenu__sp .sidemenu__box p {
-      padding: 10px;
-      margin: 0 auto; }
+    width: 100%;
+    padding: 15px 1%; }
+  @media only screen and (max-width: 959px) {
+    .sidemenu__sp .sidemenu__box {
+      width: 100%;
+      min-height: 250px; } }
+  .sidemenu__sp .sidemenu__box img {
+    float: left;
+    clear: both;
+    padding: 15px; }
+  .sidemenu__sp .sidemenu__box p {
+    margin-top: 20px; }
   .sidemenu__box {
-    width: 105%;
+    width: 98%;
+    padding: 20px 1% 0 1%;
     text-align: center;
-    padding: 20px 0;
     margin-bottom: 10px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    min-height: 280px; }
     .sidemenu__box__button {
       border-radius: 12px;
       background-color: #887f69;
@@ -285,16 +292,21 @@ footer img {
   @media only screen and (max-width: 959px) {
     .pannel__inner {
       /*はスマホ時*/
-      padding: 3%;
-      width: 42%;
-      margin: 0;
+      padding: 2%;
+      width: 45%;
+      margin: 0 0 5px 0;
       display: inline-block;
-      text-align: left; } }
+      text-align: left; }
+      .pannel__inner img {
+        display: block;
+        margin: 0 auto; } }
   .pannel__inner-price {
     padding-top: 10px;
     display: block; }
   .pannel__inner img {
     padding-bottom: 5px; }
+  .pannel__inner p {
+    font-size: 0.9em; }
 
 .guide {
   display: -webkit-flex;
@@ -336,14 +348,7 @@ footer img {
   color: #524c3e;
   font-size: small; }
   .breadcrumb .yaji {
-    content: "";
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin-right: 18px;
-    border: solid #f9f8f6;
-    border-width: 1px 1px 0 0;
-    transform: rotate(45deg); }
+    margin-right: 10px; }
   .breadcrumb__list {
     padding: 10px 0; }
     .breadcrumb__list a {
@@ -354,7 +359,7 @@ footer img {
     .breadcrumb__list li {
       list-style: none;
       display: inline;
-      margin: 0 10px 0 10px; }
+      margin: 0 0 0 10px; }
     .breadcrumb__list i {
       padding-right: 15px; }
 
@@ -363,19 +368,26 @@ footer img {
   padding: 20px 0 20px 0; }
   .products img {
     margin: 2px; }
+  .products .products__price-cart-sp {
+    margin: 0 auto; }
   .products #display_img {
     float: left;
-    clear: both;
     width: 400px;
     padding-right: 8px; }
+    @media screen and (max-width: 1202px) {
+      .products #display_img {
+        width: 100%;
+        float: none;
+        text-align: center; } }
     @media only screen and (max-width: 959px) {
       .products #display_img {
         /*はスマホ時*/
-        max-width: 100%; } }
+        width: 100%;
+        float: none;
+        clear: both; } }
   .products__inner {
     margin: 20px;
-    padding-top: 5px;
-    clear: both; }
+    padding-top: 5px; }
     .products__inner__border {
       border-top: solid 1px #b9ab8d;
       clear: both; }
@@ -420,7 +432,8 @@ footer img {
     @media only screen and (max-width: 959px) {
       .products__box li img {
         /*はスマホ時*/
-        width: 22%; } }
+        width: 22%;
+        float: none; } }
   .products__quantity {
     position: relative; }
     .products__quantity form {
@@ -484,7 +497,9 @@ footer img {
           /*はスマホ時*/
           display: none; } }
     .products__price-cart-sp {
-      padding-top: 20px; }
+      padding-top: 20px;
+      display: block;
+      margin: 0 auto; }
       @media only screen and (min-width: 960px) {
         .products__price-cart-sp {
           /*はpc時*/
@@ -527,21 +542,24 @@ footer img {
     background-color: #b9ab8d;
     color: #ffffff; }
   .list__button-right {
+    margin: 10px 0 10px 0;
     float: right; }
   .list__button-left {
+    margin: 10px 0 10px 0;
     float: left; }
 
-/* For modern browsers */
-.cf:before,
-.cf:after {
-  content: "";
-  display: table; }
+@media only screen and (max-width: 959px) {
+  div #main.columns {
+    float: none; } }
 
-.cf:after {
-  clear: both; }
+@media only screen and (max-width: 959px) {
+  div #main.nine.columns {
+    width: 100%; } }
 
-/* For IE 6/7 (trigger hasLayout) */
-.cf {
-  zoom: 1; }
+@media only screen and (max-width: 959px) {
+  #main.theree.colums {
+    width: 100%; } }
+
+/*product のbetweenなんとかつかう*/
 
 /*# sourceMappingURL=style.css.map */

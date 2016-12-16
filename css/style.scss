@@ -161,11 +161,11 @@ body {
       }
       a {
         color: $linkcolor;
-        font-size: large;
+        font-size: medium;
         text-decoration: none;
         font-weight: bold;
         float: left;
-        padding-right: 15px;
+        padding-right: 25px;
       }
       a:hover {
         color: $linkcolor-hover;
@@ -229,6 +229,7 @@ footer {
 
 .sidemenu {
   width: 100%;
+  font-size: 0.9em;
 
   &__pc {
     @media #{$small} {
@@ -239,9 +240,8 @@ footer {
   //共通！
 
   &__title {
-    width: 95%;
+    width: 90%;
     padding: 5%;
-    font-size: 1em;
     background-color: $sidecolor;
     color: #ffffff;
     border-bottom: 1px solid $bgcolor;
@@ -260,15 +260,21 @@ footer {
 
   ul {
     background-color: #ffffff;
-    width: 95%;
-    padding: 5%;
+    width: 98%;
+    padding: 1%;
   }
 
   li {
+    position: relative;
     list-style: none;
     display: block;
     border-bottom: 1px solid $bgcolor;
     padding: 10px;
+
+    i{
+      color: $linkcolor-hover;
+    }
+
   }
 
   li a:hover {
@@ -282,7 +288,7 @@ footer {
   }
 
   &__serch {
-    width: 95%;
+    width: 90%;
     padding: 5%;
     color: $sidecolor;
     font-weight: bold;
@@ -291,14 +297,14 @@ footer {
     margin-bottom: 10px;
 
     @media #{$small} {
-      height: 35px;
-      padding: 15px;
-      margin-bottom: 0;
+      height: auto;
+
     }
   }
 
   i {
-    margin-left: 60px;
+    position: absolute;
+    right: 2%;
     font-size: 1.6em;
   }
 
@@ -313,16 +319,17 @@ footer {
     background-color: #eeeeee;
     border: 0;
     height: 30px; /* 高さ40px */
-    width: 175px;
     padding: 0 10px;
     position: absolute; /* 絶対配置 */
     left: 0;
     top: 0;
     font-size: small;
     letter-spacing: 0.05em;
+    width: 98%;
 
     @media #{$small} { /*スマホ時は大きく*/
-      width: 100%;
+      width: 98%;
+      margin: 1%;
       height: 35px;
     }
 
@@ -333,13 +340,13 @@ footer {
     width: 17px;
     height: 17px;
     position: absolute; /* 絶対配置 */
-    left: 145px;
+    right: 4%;
     top: 7px;
 
     @media #{$small} { /*はスマホ時*/
       position: absolute; /* 絶対配置 */
       left: 90%;
-      top: 10px;
+      top: 16px;
     }
   }
 
@@ -358,19 +365,26 @@ footer {
       height: 30px;
 
       @media #{$small} {
-        width: 95%;
+        width: 100%;
+        padding: 0 0 10px 0;
+        min-height: 40px;
+        margin: 0;
       }
 
     }
 
     .sidemenu__title {
-      width: 95%;
-      padding: 15px 5%;
+      width: 100%;
+      padding: 15px 1%;
     }
 
     .sidemenu__box {
-      width: 105%;
-      height: 240px;
+
+      @media #{$small} {
+
+        width: 100%;
+        min-height: 250px;
+      }
 
       img {
         float: left;
@@ -379,19 +393,19 @@ footer {
       }
 
       p {
-        padding: 10px;
-        margin: 0 auto;
+        margin-top: 20px;
       }
     }
 
   }
 
   &__box {
-    width: 105%;
+    width: 98%;
+    padding: 20px 1% 0 1%;
     text-align: center;
-    padding: 20px 0;
     margin-bottom: 10px;
     background-color: #ffffff;
+    min-height: 280px;
 
     &__button {
       border-radius: 12px;
@@ -431,19 +445,29 @@ footer {
   margin: 5px;
 
   @media #{$small} { /*はスマホ時*/
-    padding: 3%;
-    width: 42%;
-    margin: 0;
+    padding: 2%;
+    width: 45%;
+    margin: 0 0 5px 0;
     display: inline-block;
     text-align: left;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
   }
 
   &-price {
     padding-top: 10px;
     display: block;
   }
+
   img {
     padding-bottom: 5px;
+  }
+  p {
+    font-size: 0.9em;
   }
 
 }
@@ -497,14 +521,7 @@ footer {
   font-size: small;
 
   .yaji {
-    content: "";
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    margin-right: 18px;
-    border: solid $bgcolor;
-    border-width: 1px 1px 0 0;
-    transform: rotate(45deg);
+    margin-right: 10px;
   }
 
   &__list {
@@ -524,7 +541,7 @@ footer {
     li {
       list-style: none;
       display: inline;
-      margin: 0 10px 0 10px;
+      margin: 0 0 0 10px;
     }
     i {
       padding-right: 15px;
@@ -540,21 +557,31 @@ footer {
     margin: 2px;
   }
 
+  .products__price-cart-sp {
+    margin: 0 auto;
+  }
+
   #display_img {
     float: left;
-    clear: both;
     width: 400px;
     padding-right: 8px;
 
+    @media screen and (max-width: 1202px) {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
     @media #{$small} { /*はスマホ時*/
-      max-width: 100%;
+      width: 100%;
+      float: none;
+      clear: both;
     }
   }
 
   &__inner {
     margin: 20px;
     padding-top: 5px;
-    clear: both;
 
     &__border {
       border-top: solid 1px $linkcolor-hover;
@@ -588,6 +615,7 @@ footer {
   }
 
   &__box {
+
     ul {
       margin: 0;
       padding: 0;
@@ -616,6 +644,7 @@ footer {
       cursor: pointer;
       @media #{$small} { /*はスマホ時*/
         width: 22%;
+        float: none;
       }
 
     }
@@ -708,7 +737,8 @@ footer {
 
     &-cart-sp {
       padding-top: 20px;
-
+      display: block;
+      margin: 0 auto;
       @media #{$large} { /*はpc時*/
         display: none;
       }
@@ -754,15 +784,13 @@ footer {
   font-weight: bold;
   text-decoration: none;
 
-
   @media #{$small} { /*はpc時*/
     max-width: 48%;
   }
 
-
   a {
     padding: 8px 50px;
-    display:block;
+    display: block;
     color: #ffffff;
     text-decoration: none;
   }
@@ -772,26 +800,32 @@ footer {
     color: #ffffff;
   }
   &-right {
+    margin: 10px 0 10px 0;
     float: right;
   }
   &-left {
+    margin: 10px 0 10px 0;
     float: left;
   }
 
 }
 
-/* For modern browsers */
-.cf:before,
-.cf:after {
-  content:"";
-  display:table;
+div #main.columns {
+  @media #{$small} {
+    float: none;
+  }
 }
 
-.cf:after {
-  clear:both;
+div #main.nine.columns {
+  @media #{$small} {
+    width: 100%;
+  }
 }
 
-/* For IE 6/7 (trigger hasLayout) */
-.cf {
-  zoom:1;
+#main.theree.colums {
+  @media #{$small} {
+    width: 100%;
+  }
 }
+
+/*product のbetweenなんとかつかう*/
